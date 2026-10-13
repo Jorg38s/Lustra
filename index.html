@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="es-CL" class="no-js">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Lustra · Autolavado y Detailing automotriz</title>
+  <meta name="description" content="Lustra: autolavado y detailing automotriz. Lavado a mano, limpieza interior, pulido y protección cerámica. Reserva tu hora por WhatsApp.">
+  <meta name="theme-color" content="#0e0f11">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Lustra · Autolavado y Detailing automotriz">
+  <meta property="og:description" content="Cada detalle, a su brillo. Lavado a mano, detailing y protección cerámica.">
+  <meta property="og:locale" content="es_CL">
+
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230e0f11'/%3E%3Cpath d='M16 5c4 5.5 7 9 7 13a7 7 0 0 1-14 0c0-4 3-7.500 7-13z' fill='%233cc8ff'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+  <!-- Sprite SVG reutilizable: auto deportivo animado (ruedas y destello con SMIL). -->
+  <svg class="sprite" width="0" height="0" aria-hidden="true" focusable="false">
+    <defs>
+      <linearGradient id="carPaint" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0" stop-color="#ff5a5f"/>
+        <stop offset="0.5" stop-color="#e11d2e"/>
+        <stop offset="1" stop-color="#6e0a16"/>
+      </linearGradient>
+      <linearGradient id="carGlass" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0" stop-color="#0b1a22"/>
+        <stop offset="1" stop-color="#2d5a6e"/>
+      </linearGradient>
+      <linearGradient id="carShine" x1="0" y1="0" x2="1" y2="0">
+        <stop offset="0" stop-color="#fff" stop-opacity="0"/>
+        <stop offset="0.5" stop-color="#fff" stop-opacity="0.6"/>
+        <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+      </linearGradient>
+      <path id="carBodyShape" d="M56 224L56 180C56 170 64 166 80 164L150 154C200 140 250 118 320 106C370 98 420 94 460 94C520 96 570 128 610 146L718 168C756 174 776 186 778 202L778 218L748 224Z"/>
+      <clipPath id="carBodyClip"><use href="#carBodyShape"/></clipPath>
+    </defs>
+
+    <symbol id="icon-car" viewBox="0 0 800 300">
+      <ellipse cx="410" cy="260" rx="385" ry="9" fill="rgba(0,0,0,.55)"/>
+      <!-- alerón -->
+      <path d="M72 164L72 142M104 158L104 138" stroke="#14181c" stroke-width="4"/>
+      <path d="M40 142L134 130L136 139L46 151Z" fill="#14181c"/>
+      <!-- carrocería -->
+      <use href="#carBodyShape" fill="url(#carPaint)"/>
+      <path d="M150 154C200 140 250 118 320 106C370 98 420 94 460 94C520 96 570 128 610 146" fill="none" stroke="rgba(255,255,255,.5)" stroke-width="3" stroke-linecap="round"/>
+      <path d="M84 206C260 200 480 198 728 206L728 214C480 206 260 208 84 214Z" fill="#3cc8ff"/>
+      <path d="M130 221L720 221" stroke="rgba(0,0,0,.3)" stroke-width="3"/>
+      <!-- cristales y detalles -->
+      <path d="M296 152C326 120 378 106 440 103C488 105 528 126 570 150Z" fill="url(#carGlass)"/>
+      <path d="M452 104L462 151" stroke="#b3121f" stroke-width="7"/>
+      <path d="M256 176L326 164L326 200L268 196Z" fill="#0a0b0c"/>
+      <path d="M326 156L326 222M566 150L566 222" stroke="rgba(0,0,0,.35)" stroke-width="2"/>
+      <path d="M520 160L546 162" stroke="rgba(0,0,0,.45)" stroke-width="3" stroke-linecap="round"/>
+      <circle cx="396" cy="184" r="23" fill="#fff"/>
+      <text x="396" y="192" text-anchor="middle" font-family="Bricolage Grotesque, Arial, sans-serif" font-weight="800" font-size="24" fill="#6e0a16">07</text>
+      <g transform="translate(456 166) scale(1.1)"><path d="M16 4c4.200 5.800 7.500 9.400 7.500 13.800a7.500 7.500 0 0 1-15 0C8.500 13.400 11.800 9.800 16 4z" transform="translate(-16 0)" fill="#3cc8ff" stroke="#fff" stroke-width="1.500"/></g>
+      <path d="M574 152L600 148L606 154L580 158Z" fill="#b3121f"/>
+      <path d="M702 208L774 210L774 218L702 216Z" fill="#0a0b0c"/>
+      <path d="M690 172L762 188L754 196L682 182Z" fill="#c8f1ff" stroke="#3cc8ff" stroke-width="2"/>
+      <path d="M56 170L84 166L84 173L56 177Z" fill="#2a0a0e"/>
+      <path d="M690 226L790 227L790 231L686 230Z" fill="#14181c"/>
+      <!-- destello que recorre la carrocería -->
+      <g clip-path="url(#carBodyClip)">
+        <rect y="70" width="70" height="170" fill="url(#carShine)" transform="skewX(-20)">
+          <animate attributeName="x" values="-60;860;860" keyTimes="0;0.4;1" dur="6s" repeatCount="indefinite"/>
+        </rect>
+      </g>
+      <!-- ruedas -->
+      <g id="wheel-rear" transform="translate(200 204)">
+        <circle r="58" fill="#0a0b0c"/>
+        <circle r="54" fill="#0b0c0d"/>
+        <circle r="40" fill="#1b2024"/>
+        <path d="M10 -24A26 26 0 0 1 26 -5L17 -3A17 17 0 0 0 8 -15Z" fill="#3cc8ff"/>
+        <g stroke="#cfd6dc" stroke-width="6" stroke-linecap="round">
+          <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="1.1s" repeatCount="indefinite"/>
+          <path d="M0 -9L0 -36"/><path d="M0 -9L0 -36" transform="rotate(72)"/><path d="M0 -9L0 -36" transform="rotate(144)"/><path d="M0 -9L0 -36" transform="rotate(216)"/><path d="M0 -9L0 -36" transform="rotate(288)"/>
+        </g>
+        <circle r="10" fill="#3cc8ff"/><circle r="4" fill="#0b0c0d"/>
+      </g>
+      <g id="wheel-front" transform="translate(590 204)">
+        <circle r="58" fill="#0a0b0c"/>
+        <circle r="54" fill="#0b0c0d"/>
+        <circle r="40" fill="#1b2024"/>
+        <path d="M10 -24A26 26 0 0 1 26 -5L17 -3A17 17 0 0 0 8 -15Z" fill="#3cc8ff"/>
+        <g stroke="#cfd6dc" stroke-width="6" stroke-linecap="round">
+          <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="1.1s" repeatCount="indefinite"/>
+          <path d="M0 -9L0 -36"/><path d="M0 -9L0 -36" transform="rotate(72)"/><path d="M0 -9L0 -36" transform="rotate(144)"/><path d="M0 -9L0 -36" transform="rotate(216)"/><path d="M0 -9L0 -36" transform="rotate(288)"/>
+        </g>
+        <circle r="10" fill="#3cc8ff"/><circle r="4" fill="#0b0c0d"/>
+      </g>
+    </symbol>
+  </svg>
+
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+  <!-- ============ A. NAVEGACIÓN ============ -->
+  <header class="site-header" id="inicio-header">
+    <div class="container header__inner">
+      <a class="brand" href="#inicio" aria-label="Lustra, ir al inicio">
+        <svg class="brand__mark" viewBox="0 0 32 32" aria-hidden="true"><path d="M16 4c4.200 5.800 7.500 9.400 7.500 13.800a7.500 7.500 0 0 1-15 0C8.500 13.400 11.800 9.800 16 4z" fill="currentColor"/><path d="M12.500 19a3.800 3.800 0 0 0 3.200 3.400" fill="none" stroke="#0e0f11" stroke-width="2" stroke-linecap="round"/></svg>
+        <span class="brand__name" data-bind="businessName">Lustra</span>
+      </a>
+
+      <nav class="nav" id="menu-principal" aria-label="Principal">
+        <ul class="nav__list">
+          <li><a class="nav__link" href="#servicios">Servicios</a></li>
+          <li><a class="nav__link" href="#paquetes">Paquetes</a></li>
+          <li><a class="nav__link" href="#galeria">Galería</a></li>
+          <li><a class="nav__link" href="#contacto">Contacto</a></li>
+        </ul>
+        <a class="btn btn--accent nav__cta" href="#contacto" data-wa data-wa-message="Hola, quiero reservar una hora de lavado.">Reservar</a>
+      </nav>
+
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="menu-principal" aria-label="Abrir menú">
+        <span class="menu-toggle__bars" aria-hidden="true"></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="contenido">
+
+    <!-- ============ B. PORTADA ============ -->
+    <section class="hero" id="inicio" aria-labelledby="hero-title">
+      <div class="container hero__grid">
+        <div class="hero__copy">
+          <p class="eyebrow reveal"><span class="eyebrow__dot" aria-hidden="true"></span>Autolavado &amp; Detailing</p>
+          <h1 class="hero__title reveal" id="hero-title">Tu auto,<br><em>en su mejor brillo.</em></h1>
+          <p class="hero__lead reveal" data-bind="tagline-long">Lavado a mano, detailing y protección de pintura con productos de calidad y atención con hora agendada. Sin apuros, sin atajos.</p>
+          <div class="hero__actions reveal">
+            <a class="btn btn--accent btn--lg" href="#contacto" data-wa data-wa-message="Hola, quiero reservar una hora en Lustra.">Reservar por WhatsApp</a>
+            <a class="btn btn--ghost btn--lg" href="#paquetes">Ver paquetes</a>
+          </div>
+          <ul class="hero__facts reveal" aria-label="Datos clave">
+            <li><strong>4</strong><span>servicios, de lavado a cerámico</span></li>
+            <li><strong>Con cita</strong><span>atención sin filas ni apuros</span></li>
+            <li><strong>pH neutro</strong><span>shampoo seguro para tu pintura</span></li>
+          </ul>
+        </div>
+
+        <div class="hero__visual reveal" aria-hidden="true">
+          <div class="hero__ring"></div>
+          <div class="hero__car">
+            <span class="hero__streak hero__streak--1"></span>
+            <span class="hero__streak hero__streak--2"></span>
+            <span class="hero__streak hero__streak--3"></span>
+            <svg viewBox="0 0 800 300" role="presentation"><use href="#icon-car"/></svg>
+            <div class="hero__floor"></div>
+          </div>
+          <span class="chip chip--a">Acabado espejo</span>
+          <span class="chip chip--b">Secado microfibra</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ C. SERVICIOS ============ -->
+    <section class="section" id="servicios" aria-labelledby="servicios-title">
+      <div class="container">
+        <header class="section__head reveal">
+          <p class="eyebrow">Servicios</p>
+          <h2 id="servicios-title">Del lavado diario al <em>detailing completo.</em></h2>
+          <p class="section__lead">Elige según el estado de tu vehículo. Los tiempos son referenciales y se confirman al agendar.</p>
+        </header>
+
+        <ol class="services">
+          <li class="service reveal is-open">
+            <button class="service__toggle" type="button" aria-expanded="true" aria-controls="svc-1">
+              <span class="service__num">01</span>
+              <span class="service__name">Lavado exterior</span>
+              <span class="service__time">≈ 45 min</span>
+              <span class="service__icon" aria-hidden="true"></span>
+            </button>
+            <div class="service__panel" id="svc-1">
+              <p>Lavado a mano con shampoo pH neutro, limpieza de llantas y neumáticos, y secado con microfibra para evitar marcas de agua.</p>
+              <ul class="tags"><li>Lavado a mano</li><li>Llantas</li><li>Vidrios exteriores</li></ul>
+            </div>
+          </li>
+          <li class="service reveal">
+            <button class="service__toggle" type="button" aria-expanded="false" aria-controls="svc-2">
+              <span class="service__num">02</span>
+              <span class="service__name">Limpieza interior</span>
+              <span class="service__time">≈ 90 min</span>
+              <span class="service__icon" aria-hidden="true"></span>
+            </button>
+            <div class="service__panel" id="svc-2" hidden>
+              <p>Aspirado profundo, limpieza de plásticos, puertas y consola, vidrios interiores y tratamiento de tapiz o cuero según corresponda.</p>
+              <ul class="tags"><li>Aspirado profundo</li><li>Tapiz y cuero</li><li>Plásticos</li></ul>
+            </div>
+          </li>
+          <li class="service reveal">
+            <button class="service__toggle" type="button" aria-expanded="false" aria-controls="svc-3">
+              <span class="service__num">03</span>
+              <span class="service__name">Pulido y encerado</span>
+              <span class="service__time">≈ 3 – 4 h</span>
+              <span class="service__icon" aria-hidden="true"></span>
+            </button>
+            <div class="service__panel" id="svc-3" hidden>
+              <p>Descontaminación de la pintura, corrección de micro-rayas leves y sellado con cera para recuperar profundidad y brillo.</p>
+              <ul class="tags"><li>Descontaminación</li><li>Corrección leve</li><li>Cera de protección</li></ul>
+            </div>
+          </li>
+          <li class="service reveal">
+            <button class="service__toggle" type="button" aria-expanded="false" aria-controls="svc-4">
+              <span class="service__num">04</span>
+              <span class="service__name">Protección cerámica</span>
+              <span class="service__time">1 – 2 días</span>
+              <span class="service__icon" aria-hidden="true"></span>
+            </button>
+            <div class="service__panel" id="svc-4" hidden>
+              <p>Aplicación de recubrimiento cerámico sobre pintura previamente pulida. La durabilidad depende del producto y se informa en la cotización.</p>
+              <ul class="tags"><li>Pulido previo</li><li>Recubrimiento cerámico</li><li>Previa cotización</li></ul>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ============ D. PRECIOS Y PAQUETES ============ -->
+    <section class="section section--alt" id="paquetes" aria-labelledby="paquetes-title">
+      <div class="container">
+        <header class="section__head reveal">
+          <p class="eyebrow">Paquetes</p>
+          <h2 id="paquetes-title">Precios claros, <em>según tu vehículo.</em></h2>
+          <p class="section__lead">Selecciona el tipo de vehículo y los valores se actualizan.</p>
+        </header>
+
+        <div class="size-picker reveal" role="radiogroup" aria-label="Tipo de vehículo">
+          <button class="size-picker__btn is-active" type="button" role="radio" aria-checked="true" data-size="auto">Auto</button>
+          <button class="size-picker__btn" type="button" role="radio" aria-checked="false" data-size="suv">SUV</button>
+          <button class="size-picker__btn" type="button" role="radio" aria-checked="false" data-size="camioneta">Camioneta</button>
+        </div>
+
+        <div class="plans">
+          <article class="plan reveal" data-plan="Express" data-price="9900">
+            <h3 class="plan__name">Express</h3>
+            <p class="plan__desc">Para mantener el brillo semana a semana.</p>
+            <p class="plan__price"><span class="plan__amount" data-price-output>$9.900</span><span class="plan__unit">CLP</span></p>
+            <ul class="plan__list">
+              <li>Lavado exterior a mano</li>
+              <li>Llantas y neumáticos</li>
+              <li>Secado con microfibra</li>
+              <li>Vidrios exteriores</li>
+            </ul>
+            <a class="btn btn--ghost plan__cta" href="#contacto" data-wa data-wa-plan>Consultar</a>
+          </article>
+
+          <article class="plan plan--featured reveal" data-plan="Completo" data-price="24900">
+            <span class="plan__badge">Recomendado</span>
+            <h3 class="plan__name">Completo</h3>
+            <p class="plan__desc">Por fuera y por dentro, en una sola visita.</p>
+            <p class="plan__price"><span class="plan__amount" data-price-output>$24.900</span><span class="plan__unit">CLP</span></p>
+            <ul class="plan__list">
+              <li>Todo lo del paquete Express</li>
+              <li>Aspirado interior completo</li>
+              <li>Plásticos y vidrios interiores</li>
+              <li>Cera rápida de protección</li>
+            </ul>
+            <a class="btn btn--accent plan__cta" href="#contacto" data-wa data-wa-plan>Solicitar</a>
+          </article>
+
+          <article class="plan reveal" data-plan="Detailing" data-price="59900">
+            <h3 class="plan__name">Detailing</h3>
+            <p class="plan__desc">Una puesta a punto profunda del vehículo.</p>
+            <p class="plan__price"><span class="plan__amount" data-price-output>$59.900</span><span class="plan__unit">CLP</span></p>
+            <ul class="plan__list">
+              <li>Todo lo del paquete Completo</li>
+              <li>Limpieza profunda de tapiz</li>
+              <li>Descontaminación de pintura</li>
+              <li>Encerado de larga duración</li>
+            </ul>
+            <a class="btn btn--ghost plan__cta" href="#contacto" data-wa data-wa-plan>Consultar</a>
+          </article>
+
+          <article class="plan reveal" data-plan="Cerámico" data-price="189000">
+            <h3 class="plan__name">Cerámico</h3>
+            <p class="plan__desc">Máxima protección para la pintura.</p>
+            <p class="plan__price"><span class="plan__from">desde</span><span class="plan__amount" data-price-output>$189.000</span><span class="plan__unit">CLP</span></p>
+            <ul class="plan__list">
+              <li>Todo lo del paquete Detailing</li>
+              <li>Pulido de corrección</li>
+              <li>Recubrimiento cerámico</li>
+              <li>Cotización según estado</li>
+            </ul>
+            <a class="btn btn--ghost plan__cta" href="#contacto" data-wa data-wa-plan>Cotizar</a>
+          </article>
+        </div>
+
+        <p class="note reveal"><strong>Precios de demostración.</strong> Son valores ficticios en pesos chilenos (CLP) que deben revisarse antes de publicar la web para un negocio real. Los recargos por tipo de vehículo se editan en <code>script.js</code>.</p>
+      </div>
+    </section>
+
+    <!-- ============ E. GALERÍA ============ -->
+    <section class="section" id="galeria" aria-labelledby="galeria-title">
+      <div class="container">
+        <header class="section__head reveal">
+          <p class="eyebrow">Galería</p>
+          <h2 id="galeria-title">El trabajo, <em>a la vista.</em></h2>
+          <p class="section__lead">Desliza para comparar un vehículo antes y después. Las imágenes son ilustraciones de demostración: reemplázalas por fotos reales del taller.</p>
+        </header>
+
+        <div class="compare reveal">
+          <div class="compare__stage" id="compare" style="--pos: 50%">
+            <div class="compare__layer compare__layer--after" aria-hidden="true">
+              <svg viewBox="0 0 800 300"><use href="#icon-car"/></svg>
+              <span class="compare__shine"></span>
+            </div>
+            <div class="compare__layer compare__layer--before" aria-hidden="true">
+              <svg viewBox="0 0 800 300"><use href="#icon-car"/></svg>
+              <span class="compare__dirt"></span>
+            </div>
+            <span class="compare__label compare__label--before">Antes</span>
+            <span class="compare__label compare__label--after">Después</span>
+            <span class="compare__handle" aria-hidden="true"><span></span></span>
+            <input class="compare__range" type="range" min="0" max="100" value="50" aria-label="Comparar antes y después del lavado">
+          </div>
+        </div>
+
+        <div class="filters reveal" role="group" aria-label="Filtrar galería">
+          <button class="filter is-active" type="button" data-filter="todo" aria-pressed="true">Todo</button>
+          <button class="filter" type="button" data-filter="exterior" aria-pressed="false">Exterior</button>
+          <button class="filter" type="button" data-filter="interior" aria-pressed="false">Interior</button>
+          <button class="filter" type="button" data-filter="detalle" aria-pressed="false">Detalles</button>
+        </div>
+
+        <ul class="gallery">
+          <!-- Para usar fotos reales: reemplaza el <svg> de cada .tile__media por <img src="tu-foto.jpg" alt="descripción"> -->
+          <li class="tile tile--wide reveal" data-category="exterior">
+            <div class="tile__media tile__media--car">
+              <svg viewBox="0 0 800 300" role="img" aria-label="Ilustración de un auto deportivo lavado"><use href="#icon-car"/></svg>
+            </div>
+            <p class="tile__cap"><strong>Lavado exterior</strong><span>Pintura limpia y uniforme</span></p>
+          </li>
+          <li class="tile reveal" data-category="exterior">
+            <div class="tile__media">
+              <svg viewBox="0 0 200 200" role="img" aria-label="Ilustración de una llanta limpia">
+                <circle cx="100" cy="100" r="86" fill="#07080a"/>
+                <circle cx="100" cy="100" r="62" fill="#aeb4ba"/>
+                <circle cx="100" cy="100" r="14" fill="#2a2e33"/>
+                <g stroke="#2a2e33" stroke-width="9" stroke-linecap="round"><path d="M100 46V154M46 100H154M62 62L138 138M138 62L62 138"/></g>
+                <circle cx="100" cy="100" r="86" fill="none" stroke="#3cc8ff" stroke-width="2" stroke-dasharray="3 9"/>
+              </svg>
+            </div>
+            <p class="tile__cap"><strong>Llantas</strong><span>Sin polvo de frenos</span></p>
+          </li>
+          <li class="tile reveal" data-category="interior">
+            <div class="tile__media">
+              <svg viewBox="0 0 200 200" role="img" aria-label="Ilustración de un volante limpio">
+                <circle cx="100" cy="100" r="76" fill="none" stroke="#3a4046" stroke-width="16"/>
+                <circle cx="100" cy="100" r="22" fill="#2a2e33"/>
+                <path d="M26 104H78M122 104H174M100 124V176" stroke="#3a4046" stroke-width="14" stroke-linecap="round"/>
+                <path d="M40 70A70 70 0 0 1 100 30" fill="none" stroke="#3cc8ff" stroke-width="3" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <p class="tile__cap"><strong>Volante y consola</strong><span>Plásticos como nuevos</span></p>
+          </li>
+          <li class="tile reveal" data-category="detalle">
+            <div class="tile__media">
+              <svg viewBox="0 0 200 200" role="img" aria-label="Ilustración de un foco pulido">
+                <path d="M26 112C26 70 62 46 118 46L174 56L174 130C174 150 150 160 118 160C66 160 26 148 26 112Z" fill="#1d2024" stroke="#3a4046" stroke-width="3"/>
+                <circle cx="108" cy="104" r="30" fill="#0e0f11" stroke="#aeb4ba" stroke-width="3"/>
+                <circle cx="108" cy="104" r="12" fill="#3cc8ff"/>
+                <path d="M40 90C52 70 76 60 100 58" fill="none" stroke="rgba(255,255,255,.4)" stroke-width="4" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <p class="tile__cap"><strong>Focos</strong><span>Pulido y sellado</span></p>
+          </li>
+          <li class="tile reveal" data-category="interior">
+            <div class="tile__media">
+              <svg viewBox="0 0 200 200" role="img" aria-label="Ilustración de un asiento limpio">
+                <path d="M62 30C62 22 70 18 80 18L106 18C118 18 124 26 124 36L132 106L64 106Z" fill="#2a2e33"/>
+                <path d="M44 112L152 112C164 112 170 122 170 132L170 168L38 168L38 132C38 122 34 112 44 112Z" fill="#3a4046"/>
+                <path d="M62 118H146M62 132H146" stroke="#3cc8ff" stroke-width="2" stroke-dasharray="4 5"/>
+              </svg>
+            </div>
+            <p class="tile__cap"><strong>Tapiz</strong><span>Limpieza profunda</span></p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============ F. CONTACTO ============ -->
+    <section class="section section--contact" id="contacto" aria-labelledby="contacto-title">
+      <div class="container contact">
+        <div class="contact__cta reveal">
+          <p class="eyebrow">Contacto</p>
+          <h2 id="contacto-title">Agenda tu hora y <em>deja el resto con nosotros.</em></h2>
+          <p class="section__lead">Escríbenos por WhatsApp con el tipo de vehículo y el servicio que te interesa, y te confirmamos disponibilidad.</p>
+          <a class="btn btn--accent btn--lg" href="#" data-wa data-wa-message="Hola, quiero agendar una hora en Lustra.">Escribir por WhatsApp</a>
+        </div>
+
+        <dl class="contact__info reveal">
+          <div class="contact__row">
+            <dt>Teléfono</dt>
+            <dd><a href="tel:+56912345678" data-href="phone" data-bind="phoneDisplay">+56 9 1234 5678</a></dd>
+          </div>
+          <div class="contact__row">
+            <dt>Dirección</dt>
+            <dd data-bind="address">Av. Ejemplo 1234, Santiago</dd>
+          </div>
+          <div class="contact__row">
+            <dt>Horarios</dt>
+            <dd>
+              <span data-bind="hoursWeek">Lunes a viernes · 09:00 – 19:00</span><br>
+              <span data-bind="hoursSat">Sábado · 09:00 – 15:00</span><br>
+              <span data-bind="hoursSun">Domingo · cerrado</span>
+            </dd>
+          </div>
+          <div class="contact__row">
+            <dt>Redes</dt>
+            <dd class="socials">
+              <a href="https://www.instagram.com/" data-href="instagram" target="_blank" rel="noopener noreferrer">Instagram</a>
+              <a href="https://www.facebook.com/" data-href="facebook" target="_blank" rel="noopener noreferrer">Facebook</a>
+              <a href="https://www.tiktok.com/" data-href="tiktok" target="_blank" rel="noopener noreferrer">TikTok</a>
+            </dd>
+          </div>
+        </dl>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ G. PIE DE PÁGINA ============ -->
+  <footer class="site-footer">
+    <div class="container footer__grid">
+      <div class="footer__brand">
+        <a class="brand" href="#inicio" aria-label="Lustra, volver arriba">
+          <svg class="brand__mark" viewBox="0 0 32 32" aria-hidden="true"><path d="M16 4c4.200 5.800 7.500 9.400 7.500 13.800a7.500 7.500 0 0 1-15 0C8.500 13.400 11.800 9.800 16 4z" fill="currentColor"/><path d="M12.500 19a3.800 3.800 0 0 0 3.200 3.400" fill="none" stroke="#0e0f11" stroke-width="2" stroke-linecap="round"/></svg>
+          <span class="brand__name" data-bind="businessName">Lustra</span>
+        </a>
+        <p class="footer__slogan" data-bind="tagline">Cada detalle, a su brillo.</p>
+      </div>
+      <nav class="footer__nav" aria-label="Pie de página">
+        <a href="#servicios">Servicios</a>
+        <a href="#paquetes">Paquetes</a>
+        <a href="#galeria">Galería</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+      <p class="footer__legal">© <span id="year">2026</span> <span data-bind="businessName">Lustra</span>. Sitio de demostración con datos ficticios.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
